@@ -1,0 +1,237 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+=======
+`<!DOCTYPE html>
+>>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="/css/styles.css" rel="stylesheet">
+	</head>
+<<<<<<< HEAD
+	<body onload="acsess()">
+      <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+          <div class="container">
+            <div class="navbar-header">
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="/" class="navbar-brand">Home</a>
+            </div>
+            <nav class="collapse navbar-collapse" role="navigation" id="navbar">
+                  <input type="hidden" id="nav" value="<%= JSON.stringify(nav) %>">  
+              <ul class="nav navbar-right navbar-nav">
+                <li class="dropdown">
+                    <a href="#" id="logout">Log Out</a>
+                  
+                    <ul class="dropdown-menu" style="padding:12px;">
+                    <form class="form-inline">
+                      <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+                    </form>
+                  </ul>
+                </li>
+              </ul>
+              <p class="nav navbar-right navbar-nav" style="margin-right:.1%;padding: 1.3%; background-color: #000044;" href="#" id="user"></p>  
+        
+            </nav>
+          </div>
+        </header>
+=======
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        
+          <%for (i=0;i<nav.length;i++){%>
+          <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].title%></a>
+          </li>
+          <%}%>
+  
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+>>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1><%=title%>
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+          
+
+          
+          
+        <div class="login-form" >
+<<<<<<< HEAD
+            <form method="GET" <% if(flag==1) {%> action="/addbook/edit/<%=book._id%>"  <%} else {%> action="/addbook/add" <%} %> >
+              <label >Title</label>
+              <input type="text" name="Title"  id="bookTitle" autocomplete="off"
+=======
+            <form method="GET" <% if(flag==1) {%> action="/addbook/edit/<%=book._id%>"  <%} else {%> action="addbook/add" <%} %> >
+              <label >Title</label>
+              <input type="text" name="Title" class="form-control " id="bookTitle" autocomplete="off"
+>>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+                  placeholder="Title" required <% if(flag==1) {%> value="<%=book.Title%>" <%} %> >   
+              <label class="validateLabel" id="reqBookTitle" ></label>
+              <br>
+              <label >Author</label>
+<<<<<<< HEAD
+              <input type="text" name="Author"   id="bookAuthor" autocomplete="off"
+=======
+              <input type="text" name="Author"  class="form-control" id="bookAuthor" autocomplete="off"
+>>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+                  placeholder="Author" required<% if(flag==1) {%> value="<%=book.Author%>" <%} %> >
+              <label class="validateLabel" id="reqBookAuthor"></label>
+              <br>
+              <label >Genre</label>
+<<<<<<< HEAD
+              <input type="text" name="Genre"  id="bookGenre" autocomplete="off"
+=======
+              <input type="text" name="Genre" class="form-control" id="bookGenre" autocomplete="off"
+>>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+                  placeholder="Genre" required<% if(flag==1) {%> value="<%=book.Genre%>" <%} %>>
+              <label class="validateLabel" id="reqBookGenre"></label>
+              <br>
+              <label >Image</label>
+<<<<<<< HEAD
+              <input type="file" accept="image/*"  id="bookImage" name="bookImage"
+=======
+              <input type="file" accept="image/*" class="form-control" id="bookImage" name="bookImage"
+>>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+                  autocomplete="off" placeholder="Author Name" >
+              <label class="validateLabel" id="reqBookImage"></label>
+              <br>
+              <% if(flag==1) { %> <input type="submit" value="Edit Book">  <%} else {%>  <input type="submit" value="Add book"> <%} %>
+            </form>
+        </div>
+          
+        
+          
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/addBookValidation.js"></script>
+<<<<<<< HEAD
+    <script src="/js/checkAuth.js"></script>
+
+=======
+>>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+	</body>
+</html>
