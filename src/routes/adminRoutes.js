@@ -1,14 +1,10 @@
 const express=require('express')
-const adminRouter = express.Router();
-const multer =require('multer');
-
+const fs = require('fs')
+const path = require('path')
+const multer = require('multer')
+const adminRouter = express.Router()
 const authorData = require('../model/authorData.js')
 const bookData = require('../model/bookData.js')
-
-// var uploading = multer({
-//     dest: __dirname + '../public/img/',
-//     limits: {fileSize: 1000000, files:1},
-//   })
   
 
 function router(nav){
@@ -23,17 +19,12 @@ adminRouter.route('/addauthor').get((req,res) => {
     
 });
 adminRouter.route('/addauthor/add').get((req,res) => {
-    // const image = req.files.map((file) => {
-    //     return {
-    //       filename: file.filename,
-    //       originalname: file.originalname
-    //     }
-    //   })
     var item={
 
         Name:req.param('Name'),
         Country:req.param('Country'),
-        // Image:image,
+        ImageUrl:req.param('ImageUrl'),
+
     }
     var author = new authorData(item);
     author.save();
@@ -46,6 +37,8 @@ adminRouter.route('/addauthor/edit/:id').get((req,res) => {
        
         Name:req.param('Name'),
         Country:req.param('Country'),
+        ImageUrl:req.param('ImageUrl'),
+
         },
         ()=>{ 
         res.redirect('/authors')
@@ -67,7 +60,9 @@ adminRouter.route('/addbook/add').get((req,res) => {
     var item={
         Title:req.param('Title'),
         Author:req.param('Author'),
-        Genre:req.param('Genre')
+        Genre:req.param('Genre'),
+        ImageUrl:req.param('ImageUrl'),
+
     }
     var book = new bookData(item);
     book.save()
@@ -79,7 +74,9 @@ adminRouter.route('/addbook/edit/:id').get((req,res) => {
     bookData.updateOne({_id:id},{
         Title:req.param('Title'),
         Author:req.param('Author'),
-        Genre:req.param('Genre')
+        Genre:req.param('Genre'),        
+        ImageUrl:req.param('ImageUrl'),
+
         },
         ()=>{ 
     res.redirect('/books')    
@@ -95,4 +92,3 @@ return adminRouter;
 
 
 module.exports = router;
-

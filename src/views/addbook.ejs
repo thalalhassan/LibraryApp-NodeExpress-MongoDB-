@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
-=======
-`<!DOCTYPE html>
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -17,8 +15,8 @@
 		<![endif]-->
 		<link href="/css/styles.css" rel="stylesheet">
 	</head>
-<<<<<<< HEAD
-	<body onload="acsess()">
+
+	<body onload="access()">
       <header class="navbar navbar-bright navbar-fixed-top" role="banner">
           <div class="container">
             <div class="navbar-header">
@@ -48,43 +46,7 @@
             </nav>
           </div>
         </header>
-=======
-	<body>
-<header class="navbar navbar-bright navbar-fixed-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">Home</a>
-    </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        
-          <%for (i=0;i<nav.length;i++){%>
-          <li>
-          <a href="<%=nav[i].link%>"><%=nav[i].title%></a>
-          </li>
-          <%}%>
-  
-      </ul>
-      <ul class="nav navbar-right navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-          <ul class="dropdown-menu" style="padding:12px;">
-            <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-            </form>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
 
 <div id="masthead">  
   <div class="container">
@@ -130,44 +92,31 @@
           
           
         <div class="login-form" >
-<<<<<<< HEAD
-            <form method="GET" <% if(flag==1) {%> action="/addbook/edit/<%=book._id%>"  <%} else {%> action="/addbook/add" <%} %> >
+
+            <form method="GET" <% if(flag==1) {%> action="/admin/addbook/edit/<%=book._id%>"  <%} else {%> action="/admin/addbook/add" <%} %> >
               <label >Title</label>
               <input type="text" name="Title"  id="bookTitle" autocomplete="off"
-=======
-            <form method="GET" <% if(flag==1) {%> action="/addbook/edit/<%=book._id%>"  <%} else {%> action="addbook/add" <%} %> >
-              <label >Title</label>
-              <input type="text" name="Title" class="form-control " id="bookTitle" autocomplete="off"
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
                   placeholder="Title" required <% if(flag==1) {%> value="<%=book.Title%>" <%} %> >   
               <label class="validateLabel" id="reqBookTitle" ></label>
               <br>
               <label >Author</label>
-<<<<<<< HEAD
+
               <input type="text" name="Author"   id="bookAuthor" autocomplete="off"
-=======
-              <input type="text" name="Author"  class="form-control" id="bookAuthor" autocomplete="off"
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
                   placeholder="Author" required<% if(flag==1) {%> value="<%=book.Author%>" <%} %> >
               <label class="validateLabel" id="reqBookAuthor"></label>
               <br>
               <label >Genre</label>
-<<<<<<< HEAD
+
               <input type="text" name="Genre"  id="bookGenre" autocomplete="off"
-=======
-              <input type="text" name="Genre" class="form-control" id="bookGenre" autocomplete="off"
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
                   placeholder="Genre" required<% if(flag==1) {%> value="<%=book.Genre%>" <%} %>>
               <label class="validateLabel" id="reqBookGenre"></label>
               <br>
-              <label >Image</label>
-<<<<<<< HEAD
-              <input type="file" accept="image/*"  id="bookImage" name="bookImage"
-=======
-              <input type="file" accept="image/*" class="form-control" id="bookImage" name="bookImage"
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
-                  autocomplete="off" placeholder="Author Name" >
-              <label class="validateLabel" id="reqBookImage"></label>
+              <label >Image Url</label>
+              <input type="text" name="ImageUrl"  id="authorImage" autocomplete="off" placeholder="Image Url" required <% if(flag==1) {%> value="<%=book.ImageUrl%>" <%} %> >
+              <label class="validateLabel" id="reqBookImage" ></label>
               <br>
               <% if(flag==1) { %> <input type="submit" value="Edit Book">  <%} else {%>  <input type="submit" value="Add book"> <%} %>
             </form>
@@ -228,10 +177,8 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/addBookValidation.js"></script>
-<<<<<<< HEAD
+
     <script src="/js/checkAuth.js"></script>
 
-=======
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
 	</body>
 </html>

@@ -1,9 +1,8 @@
 $(window).on('load',()=>{
     if( $('#flag').val() == 1 || (sessionStorage.getItem("usrId")=="admin"))
     {
+
         sessionStorage.setItem("usrId","admin")
-        sessionStorage.setItem("access","admin")
-        
         $('#user').html("Admin")
         $('#admin').show();
          navbar(0);
@@ -13,7 +12,6 @@ $(window).on('load',()=>{
     else if( $('#flag').val() == 0 || (sessionStorage.getItem("usrId")=="normal"))
     {
         sessionStorage.setItem("usrId","normal" );
-        sessionStorage.setItem("access","normal");
         $('#admin').hide();
         $('#user').html("Normal")
          navbar(2);
@@ -22,7 +20,6 @@ $(window).on('load',()=>{
     else{
         $('#user').html("Vistor")
         sessionStorage.setItem("usrId","visitor" );
-        sessionStorage.setItem("access","visitor");
          navbar(2);
 
     }      

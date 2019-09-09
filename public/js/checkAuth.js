@@ -2,22 +2,20 @@
 $(window).on('load',()=>{
     if(sessionStorage.getItem("usrId")=="admin")
     {
-        $('#admin').show();
+        $('.admin').show();
         $('#user').html("Admin");
         navbar(0);
     }
 
     else if(sessionStorage.getItem("usrId")=="normal" || $('#flag').val()== "sign")
     {
-        $('#admin').hide();
-        if($('#flag').val()== -1 && sessionStorage.getItem("usrId")!="normal")
+        $('.admin').hide();
+        if(sessionStorage.getItem("usrId")!="normal")
             $('#user').html("Visitor");
         else
             $('#user').html("Normal");
  
         navbar(2);
-     
-
         
     }
 
@@ -41,16 +39,20 @@ function navbar(size){
     $("#navbar").append(ul);
 }
 
+
+
 function access(){
-    if(sessionStorage.getItem("access")=="normal" || sessionStorage.getItem("access")=="visitor" ){
+    if(sessionStorage.getItem("usrId")=="normal" || sessionStorage.getItem("usrId")=="visitor" ){
         open("/","_SELF");
-        alert("You are not an Admin.Access Restricted")
+        alert("You are not an Admin!!  Access Restricted")
 
     }
 };
   
+
+
 $('#logout').on('click',()=>{
-    if( $('#flag').val() == -1 && (sessionStorage.getItem("usrId")!="normal") && (sessionStorage.getItem("usrId")!="admin"))
+    if((sessionStorage.getItem("usrId")!="normal") && (sessionStorage.getItem("usrId")!="admin"))
     {
        alert("You are just a vistor . Please LogIn")
 

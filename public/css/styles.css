@@ -188,7 +188,10 @@ a,a:hover {
   background-color: #f2f2f2;
   padding: 20px;
 }
-
+.admin{
+  float:right;
+  display: none;
+}
 
 .btn-twitter {background-color:#4099FF;color:#fff;}
 .btn-facebook {background-color:#3B5998;color:#fff;}

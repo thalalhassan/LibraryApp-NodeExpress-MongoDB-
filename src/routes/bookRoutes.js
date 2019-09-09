@@ -11,12 +11,8 @@ booksRouter.route('/').get((req,res) => {
         {
             nav,
             title:'Books',
-<<<<<<< HEAD
             books,
-            flag:1
-=======
-            books
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
         })
     });
     
@@ -27,11 +23,7 @@ booksRouter.route('/:id').get((req,res)=>{
     res.render('book',
     {
         nav,
-<<<<<<< HEAD
         title:book.Title,
-=======
-        title:'single Book',
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
         book
         })
     });

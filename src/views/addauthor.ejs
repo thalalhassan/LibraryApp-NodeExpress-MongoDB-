@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
-=======
-`<!DOCTYPE html>
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -12,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-<<<<<<< HEAD
+
 		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body onload="access()">
@@ -28,7 +26,6 @@
               <a href="/" class="navbar-brand">Home</a>
             </div>
             <nav class="collapse navbar-collapse" role="navigation" id="navbar">
-                <input type="hidden" id="flag" value="sign"> 
                 <input type="hidden" id="nav" value="<%= JSON.stringify(nav) %>">  
               <ul class="nav navbar-right navbar-nav">
                 <li class="dropdown">
@@ -46,48 +43,7 @@
             </nav>
           </div>
         </header>
-=======
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="/css/styles.css" rel="stylesheet">
-	</head>
-	<body>
-<header class="navbar navbar-bright navbar-fixed-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">Home</a>
-    </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        
-          <%for (i=0;i<nav.length;i++){%>
-          <li>
-          <a href="<%=nav[i].link%>"><%=nav[i].title%></a>
-          </li>
-          <%}%>
-  
-      </ul>
-      <ul class="nav navbar-right navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-          <ul class="dropdown-menu" style="padding:12px;">
-            <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-            </form>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
 
 <div id="masthead">  
   <div class="container">
@@ -129,48 +85,35 @@
       <div class="panel">
         <div class="panel-body">
           
-<<<<<<< HEAD
+
           
           
           <div class="login-form" >
-            <form method="GET" <% if(flag==1) {%> action="/addauthor/edit/<%=author._id%>"  <%} else {%> action="addauthor/add" <%} %> >
+            <form method="GET" <% if(flag==1) {%> action="/admin/addauthor/edit/<%=author._id%>"  <%} else {%> action="/admin/addauthor/add" <%} %> >
               <label >Name</label>
               <input type="text" name="Name"  id="authorName" autocomplete="off"
-=======
-          <div class="login-form" >
-            <form method="GET" <% if(flag==1) {%> action="/addauthor/edit/<%=author._id%>"  <%} else {%> action="addauthor/add" <%} %> >
-              <label >Name</label>
-              <input type="text" name="Name" class="form-control " id="authorName" autocomplete="off"
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
                   placeholder="Name" required <% if(flag==1) {%> value="<%=author.Name%>" <%} %> >   
               <label class="validateLabel" id="reqBookName" ></label>
               <br>
               <label >Country</label>
-<<<<<<< HEAD
+
               <input type="text" name="Country"   id="authorCountry" autocomplete="off"
-=======
-              <input type="text" name="Country"  class="form-control" id="authorCountry" autocomplete="off"
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
                   placeholder="Country" required <% if(flag==1) {%> value="<%=author.Country%>" <%} %> >
               <label class="validateLabel" id="reqBookCountry"></label>
               <br>   
-              <label >Image</label>
-<<<<<<< HEAD
-              <input type="file" accept="image/*"  id="authorImage"
-=======
-              <input type="file" accept="image/*" class="form-control" id="authorImage"
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
-                  autocomplete="off" placeholder="Country Name" >
+              <label >Image Url</label>
+              
+
+              <input type="text" name="ImageUrl"  id="authorImage" autocomplete="off" placeholder="Image Url" required <% if(flag==1) {%> value="<%=author.ImageUrl%>" <%} %> >
               <label class="validateLabel" id="reqBookImage"></label>
               <br>
               <% if(flag==1) { %> <input type="submit" value="Edit author">  <%} else {%>  <input type="submit" value="Add author"> <%} %>
             </form>
-<<<<<<< HEAD
+
         </div>    
-=======
-        </div>
-        
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
           
         </div>
       </div>
@@ -224,13 +167,10 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-<<<<<<< HEAD
+
     <script src="/js/signInValidation.js"></script>
     <script src="/js/checkAuth.js"></script>
 
 
-=======
-    <script src="/js/addAuthorValidation.js"></script>
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
 	</body>
 </html>

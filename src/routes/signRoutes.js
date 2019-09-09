@@ -1,17 +1,11 @@
 const express=require('express');
 const signRouter = express.Router();
-<<<<<<< HEAD
 const userData = require('../model/userData');
 
 
 function router(nav){
 signRouter.route('/login').get((req,res) => {
-=======
 
-function router(nav){
-
-signRouter.route('/').get((req,res) => {
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
     res.render('login',
         {
             nav,
@@ -20,7 +14,6 @@ signRouter.route('/').get((req,res) => {
     
 });
 
-<<<<<<< HEAD
 signRouter.route('/login/log').get((req,res) => {
     name= req.param('username');
     pwd= req.param('pwd')
@@ -35,11 +28,11 @@ signRouter.route('/login/log').get((req,res) => {
             if(user.password==pwd){
                 if(user.userType == "admin"){
                     console.log("admn log")
-                     flag=1;
+                      flag=1;
                 }
                 else{
                     console.log("normal log")
-                      flag=0;
+                    flag=0;                   
                 }
                  res.render('index',{
                      nav,
@@ -61,8 +54,7 @@ signRouter.route('/login/log').get((req,res) => {
     
 });
 
-=======
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
 signRouter.route('/signup').get((req,res)=>{
     res.render('signup',
     {
@@ -70,7 +62,6 @@ signRouter.route('/signup').get((req,res)=>{
         title:'SignUp',
     })
 });
-<<<<<<< HEAD
 signRouter.route('/signup/add').get((req,res)=>{
     var item={
         name:req.param('name'),
@@ -91,20 +82,13 @@ signRouter.route('/signup/add').get((req,res)=>{
             // res.send('500','Username/email already exist ')
             console.log("user exist")
             console.log(user)
-            res.redirect('/sign/signup');
+            res.redirect('/sign/signin');
 
         }
         });
     
 });
 
-
-
-
-
-
-=======
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
 
 return signRouter;
 }

@@ -14,7 +14,7 @@
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
-<<<<<<< HEAD
+
       <header class="navbar navbar-bright navbar-fixed-top" role="banner">
           <div class="container">
             <div class="navbar-header">
@@ -27,7 +27,6 @@
               <a href="/" class="navbar-brand">Home</a>
             </div>
             <nav class="collapse navbar-collapse" role="navigation" id="navbar">
-                  <input type="hidden" id="flag" value="<%=flag%>"> 
                   <input type="hidden" id="nav" value="<%= JSON.stringify(nav) %>">  
               <ul class="nav navbar-right navbar-nav">
                 <li class="dropdown">
@@ -45,42 +44,7 @@
             </nav>
           </div>
         </header>
-=======
-<header class="navbar navbar-bright navbar-fixed-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">Home</a>
-    </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        
-          <%for (i=0;i<nav.length;i++){%>
-          <li>
-          <a href="<%=nav[i].link%>"><%=nav[i].title%></a>
-          </li>
-          <%}%>
-  
-      </ul>
-      <ul class="nav navbar-right navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-          <ul class="dropdown-menu" style="padding:12px;">
-            <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-            </form>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+
 
 <div id="masthead">  
   <div class="container">
@@ -129,29 +93,23 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="<%=books[i].img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="<%=books[i].ImageUrl%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-<<<<<<< HEAD
-                  <div class="admin" id="admin" style="float:right;"><br>
+
+                  <div class="admin" ><br>
                     <a href="/books/editbook/<%=books[i]._id%>" style="width:100px; margin-left: -50%;" class="btn btn-success">Edit</a> <br> <br>
                     <a href="/books/delete/<%=books[i]._id%>" style="width:100px; margin-left: -50%;" class="btn btn-danger">Delete</a>   
                   </div>
                 
-=======
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
               <h3><%=books[i].Title%></h3>
               <div class="row">
                 <div class="col-xs-9">
                   <h4><span class="label label-default"><%=books[i].Author%> </span></h4><h4>
                   <small style="font-family:courier,'new courier';" class="text-muted"><%=books[i].Genre%>   .<a href="/books/<%=books[i]._id%>" class="text-muted">Read More</a></small>
-<<<<<<< HEAD
-                
-=======
-                  <small style="font-family:courier,'new courier';" class="text-muted">.<a href="/books/delete/<%=books[i]._id%>" class="text-muted">Delete</a></small>
-                  <small style="font-family:courier,'new courier';" class="text-muted">.<a href="/books/editbook/<%=books[i]._id%>" class="text-muted">Edit</a></small>
 
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
+                
+
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
@@ -216,13 +174,9 @@
 </footer>
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<<<<<<< HEAD
+
     <script src="js/bootstrap.min.js"></script>
     <script src="/js/checkAuth.js"></script>
-    
 
-=======
-		<script src="js/bootstrap.min.js"></script>
->>>>>>> 27d9458439e32ecee3f3c198cb889841a71297a8
 	</body>
 </html>
